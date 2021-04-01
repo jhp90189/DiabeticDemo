@@ -1,0 +1,609 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		18A234122616926B00BC69E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A234112616926B00BC69E0 /* AppDelegate.swift */; };
+		18A234142616926B00BC69E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A234132616926B00BC69E0 /* SceneDelegate.swift */; };
+		18A234162616926B00BC69E0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A234152616926B00BC69E0 /* ViewController.swift */; };
+		18A234192616926B00BC69E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18A234172616926B00BC69E0 /* Main.storyboard */; };
+		18A2341C2616926B00BC69E0 /* DiabeticDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18A2341A2616926B00BC69E0 /* DiabeticDemo.xcdatamodeld */; };
+		18A2341E2616926E00BC69E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18A2341D2616926E00BC69E0 /* Assets.xcassets */; };
+		18A234212616926E00BC69E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18A2341F2616926E00BC69E0 /* LaunchScreen.storyboard */; };
+		18A2342C2616926F00BC69E0 /* DiabeticDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A2342B2616926F00BC69E0 /* DiabeticDemoTests.swift */; };
+		18A234372616926F00BC69E0 /* DiabeticDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A234362616926F00BC69E0 /* DiabeticDemoUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		18A234282616926F00BC69E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18A234062616926B00BC69E0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 18A2340D2616926B00BC69E0;
+			remoteInfo = DiabeticDemo;
+		};
+		18A234332616926F00BC69E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18A234062616926B00BC69E0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 18A2340D2616926B00BC69E0;
+			remoteInfo = DiabeticDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		18A2340E2616926B00BC69E0 /* DiabeticDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiabeticDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		18A234112616926B00BC69E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		18A234132616926B00BC69E0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		18A234152616926B00BC69E0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		18A234182616926B00BC69E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		18A2341B2616926B00BC69E0 /* DiabeticDemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DiabeticDemo.xcdatamodel; sourceTree = "<group>"; };
+		18A2341D2616926E00BC69E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		18A234202616926E00BC69E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		18A234222616926E00BC69E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18A234272616926F00BC69E0 /* DiabeticDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DiabeticDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		18A2342B2616926F00BC69E0 /* DiabeticDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiabeticDemoTests.swift; sourceTree = "<group>"; };
+		18A2342D2616926F00BC69E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18A234322616926F00BC69E0 /* DiabeticDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DiabeticDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		18A234362616926F00BC69E0 /* DiabeticDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiabeticDemoUITests.swift; sourceTree = "<group>"; };
+		18A234382616926F00BC69E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		18A2340B2616926B00BC69E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18A234242616926F00BC69E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18A2342F2616926F00BC69E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		18A234052616926B00BC69E0 = {
+			isa = PBXGroup;
+			children = (
+				18A234102616926B00BC69E0 /* DiabeticDemo */,
+				18A2342A2616926F00BC69E0 /* DiabeticDemoTests */,
+				18A234352616926F00BC69E0 /* DiabeticDemoUITests */,
+				18A2340F2616926B00BC69E0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		18A2340F2616926B00BC69E0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				18A2340E2616926B00BC69E0 /* DiabeticDemo.app */,
+				18A234272616926F00BC69E0 /* DiabeticDemoTests.xctest */,
+				18A234322616926F00BC69E0 /* DiabeticDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		18A234102616926B00BC69E0 /* DiabeticDemo */ = {
+			isa = PBXGroup;
+			children = (
+				18A234112616926B00BC69E0 /* AppDelegate.swift */,
+				18A234132616926B00BC69E0 /* SceneDelegate.swift */,
+				18A234152616926B00BC69E0 /* ViewController.swift */,
+				18A234172616926B00BC69E0 /* Main.storyboard */,
+				18A2341D2616926E00BC69E0 /* Assets.xcassets */,
+				18A2341F2616926E00BC69E0 /* LaunchScreen.storyboard */,
+				18A234222616926E00BC69E0 /* Info.plist */,
+				18A2341A2616926B00BC69E0 /* DiabeticDemo.xcdatamodeld */,
+			);
+			path = DiabeticDemo;
+			sourceTree = "<group>";
+		};
+		18A2342A2616926F00BC69E0 /* DiabeticDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				18A2342B2616926F00BC69E0 /* DiabeticDemoTests.swift */,
+				18A2342D2616926F00BC69E0 /* Info.plist */,
+			);
+			path = DiabeticDemoTests;
+			sourceTree = "<group>";
+		};
+		18A234352616926F00BC69E0 /* DiabeticDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				18A234362616926F00BC69E0 /* DiabeticDemoUITests.swift */,
+				18A234382616926F00BC69E0 /* Info.plist */,
+			);
+			path = DiabeticDemoUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		18A2340D2616926B00BC69E0 /* DiabeticDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18A2343B2616926F00BC69E0 /* Build configuration list for PBXNativeTarget "DiabeticDemo" */;
+			buildPhases = (
+				18A2340A2616926B00BC69E0 /* Sources */,
+				18A2340B2616926B00BC69E0 /* Frameworks */,
+				18A2340C2616926B00BC69E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DiabeticDemo;
+			productName = DiabeticDemo;
+			productReference = 18A2340E2616926B00BC69E0 /* DiabeticDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		18A234262616926F00BC69E0 /* DiabeticDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18A2343E2616926F00BC69E0 /* Build configuration list for PBXNativeTarget "DiabeticDemoTests" */;
+			buildPhases = (
+				18A234232616926F00BC69E0 /* Sources */,
+				18A234242616926F00BC69E0 /* Frameworks */,
+				18A234252616926F00BC69E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				18A234292616926F00BC69E0 /* PBXTargetDependency */,
+			);
+			name = DiabeticDemoTests;
+			productName = DiabeticDemoTests;
+			productReference = 18A234272616926F00BC69E0 /* DiabeticDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		18A234312616926F00BC69E0 /* DiabeticDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18A234412616926F00BC69E0 /* Build configuration list for PBXNativeTarget "DiabeticDemoUITests" */;
+			buildPhases = (
+				18A2342E2616926F00BC69E0 /* Sources */,
+				18A2342F2616926F00BC69E0 /* Frameworks */,
+				18A234302616926F00BC69E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				18A234342616926F00BC69E0 /* PBXTargetDependency */,
+			);
+			name = DiabeticDemoUITests;
+			productName = DiabeticDemoUITests;
+			productReference = 18A234322616926F00BC69E0 /* DiabeticDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		18A234062616926B00BC69E0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1230;
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					18A2340D2616926B00BC69E0 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					18A234262616926F00BC69E0 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = 18A2340D2616926B00BC69E0;
+					};
+					18A234312616926F00BC69E0 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = 18A2340D2616926B00BC69E0;
+					};
+				};
+			};
+			buildConfigurationList = 18A234092616926B00BC69E0 /* Build configuration list for PBXProject "DiabeticDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 18A234052616926B00BC69E0;
+			productRefGroup = 18A2340F2616926B00BC69E0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				18A2340D2616926B00BC69E0 /* DiabeticDemo */,
+				18A234262616926F00BC69E0 /* DiabeticDemoTests */,
+				18A234312616926F00BC69E0 /* DiabeticDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		18A2340C2616926B00BC69E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18A234212616926E00BC69E0 /* LaunchScreen.storyboard in Resources */,
+				18A2341E2616926E00BC69E0 /* Assets.xcassets in Resources */,
+				18A234192616926B00BC69E0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18A234252616926F00BC69E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18A234302616926F00BC69E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		18A2340A2616926B00BC69E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18A234162616926B00BC69E0 /* ViewController.swift in Sources */,
+				18A234122616926B00BC69E0 /* AppDelegate.swift in Sources */,
+				18A234142616926B00BC69E0 /* SceneDelegate.swift in Sources */,
+				18A2341C2616926B00BC69E0 /* DiabeticDemo.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18A234232616926F00BC69E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18A2342C2616926F00BC69E0 /* DiabeticDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18A2342E2616926F00BC69E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18A234372616926F00BC69E0 /* DiabeticDemoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		18A234292616926F00BC69E0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 18A2340D2616926B00BC69E0 /* DiabeticDemo */;
+			targetProxy = 18A234282616926F00BC69E0 /* PBXContainerItemProxy */;
+		};
+		18A234342616926F00BC69E0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 18A2340D2616926B00BC69E0 /* DiabeticDemo */;
+			targetProxy = 18A234332616926F00BC69E0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		18A234172616926B00BC69E0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18A234182616926B00BC69E0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		18A2341F2616926E00BC69E0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18A234202616926E00BC69E0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		18A234392616926F00BC69E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		18A2343A2616926F00BC69E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		18A2343C2616926F00BC69E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DiabeticDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Jainesh.DiabeticDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		18A2343D2616926F00BC69E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DiabeticDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Jainesh.DiabeticDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		18A2343F2616926F00BC69E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DiabeticDemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Jainesh.DiabeticDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DiabeticDemo.app/DiabeticDemo";
+			};
+			name = Debug;
+		};
+		18A234402616926F00BC69E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DiabeticDemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Jainesh.DiabeticDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DiabeticDemo.app/DiabeticDemo";
+			};
+			name = Release;
+		};
+		18A234422616926F00BC69E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DiabeticDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Jainesh.DiabeticDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DiabeticDemo;
+			};
+			name = Debug;
+		};
+		18A234432616926F00BC69E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DiabeticDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Jainesh.DiabeticDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DiabeticDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		18A234092616926B00BC69E0 /* Build configuration list for PBXProject "DiabeticDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18A234392616926F00BC69E0 /* Debug */,
+				18A2343A2616926F00BC69E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18A2343B2616926F00BC69E0 /* Build configuration list for PBXNativeTarget "DiabeticDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18A2343C2616926F00BC69E0 /* Debug */,
+				18A2343D2616926F00BC69E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18A2343E2616926F00BC69E0 /* Build configuration list for PBXNativeTarget "DiabeticDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18A2343F2616926F00BC69E0 /* Debug */,
+				18A234402616926F00BC69E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18A234412616926F00BC69E0 /* Build configuration list for PBXNativeTarget "DiabeticDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18A234422616926F00BC69E0 /* Debug */,
+				18A234432616926F00BC69E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		18A2341A2616926B00BC69E0 /* DiabeticDemo.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				18A2341B2616926B00BC69E0 /* DiabeticDemo.xcdatamodel */,
+			);
+			currentVersion = 18A2341B2616926B00BC69E0 /* DiabeticDemo.xcdatamodel */;
+			path = DiabeticDemo.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 18A234062616926B00BC69E0 /* Project object */;
+}
