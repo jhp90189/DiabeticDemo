@@ -16,6 +16,9 @@
 		18A234212616926E00BC69E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18A2341F2616926E00BC69E0 /* LaunchScreen.storyboard */; };
 		18A2342C2616926F00BC69E0 /* DiabeticDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A2342B2616926F00BC69E0 /* DiabeticDemoTests.swift */; };
 		18A234372616926F00BC69E0 /* DiabeticDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A234362616926F00BC69E0 /* DiabeticDemoUITests.swift */; };
+		18A234482616960700BC69E0 /* TabularViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A234472616960700BC69E0 /* TabularViewCell.swift */; };
+		18A2344D26173BD900BC69E0 /* TabularHeaderview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A2344C26173BD900BC69E0 /* TabularHeaderview.swift */; };
+		18A23452261780F000BC69E0 /* TipsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A23451261780F000BC69E0 /* TipsCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		18A234322616926F00BC69E0 /* DiabeticDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DiabeticDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18A234362616926F00BC69E0 /* DiabeticDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiabeticDemoUITests.swift; sourceTree = "<group>"; };
 		18A234382616926F00BC69E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18A234472616960700BC69E0 /* TabularViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabularViewCell.swift; sourceTree = "<group>"; };
+		18A2344C26173BD900BC69E0 /* TabularHeaderview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabularHeaderview.swift; sourceTree = "<group>"; };
+		18A23451261780F000BC69E0 /* TipsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +110,9 @@
 				18A234112616926B00BC69E0 /* AppDelegate.swift */,
 				18A234132616926B00BC69E0 /* SceneDelegate.swift */,
 				18A234152616926B00BC69E0 /* ViewController.swift */,
+				18A2344C26173BD900BC69E0 /* TabularHeaderview.swift */,
+				18A234472616960700BC69E0 /* TabularViewCell.swift */,
+				18A23451261780F000BC69E0 /* TipsCell.swift */,
 				18A234172616926B00BC69E0 /* Main.storyboard */,
 				18A2341D2616926E00BC69E0 /* Assets.xcassets */,
 				18A2341F2616926E00BC69E0 /* LaunchScreen.storyboard */,
@@ -264,7 +273,10 @@
 				18A234162616926B00BC69E0 /* ViewController.swift in Sources */,
 				18A234122616926B00BC69E0 /* AppDelegate.swift in Sources */,
 				18A234142616926B00BC69E0 /* SceneDelegate.swift in Sources */,
+				18A2344D26173BD900BC69E0 /* TabularHeaderview.swift in Sources */,
+				18A23452261780F000BC69E0 /* TipsCell.swift in Sources */,
 				18A2341C2616926B00BC69E0 /* DiabeticDemo.xcdatamodeld in Sources */,
+				18A234482616960700BC69E0 /* TabularViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
