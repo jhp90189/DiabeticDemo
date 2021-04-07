@@ -49,8 +49,8 @@ class TabularHeaderview: UIView {
         ])
         tipsHeaderView.delegate = self
         tipsHeaderView.dataSource = self
-        let numberOfRow = Double(items.count) / 2.5
-        heightAnchor.constraint(equalToConstant: CGFloat(numberOfRow * 55)).isActive = true
+        let numberOfRow = Int(Double(items.count) / 2.5)
+        heightAnchor.constraint(equalToConstant: CGFloat(numberOfRow * 50)).isActive = true
     }
 }
 
