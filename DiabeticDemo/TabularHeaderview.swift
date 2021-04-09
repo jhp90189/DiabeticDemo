@@ -11,7 +11,6 @@ class TabularHeaderview: UIView {
     
     private let verticalMargin: CGFloat = 10.0
     private let horizontalMargin: CGFloat = 5.0
-    private let selectedCategory = 0
     private var listHeightConstraint: NSLayoutConstraint? = nil
 
     private lazy var tipsHeaderView: UICollectionView = {
@@ -35,7 +34,7 @@ class TabularHeaderview: UIView {
         }
     }
     
-    private var selectedIndexpath: IndexPath? = nil
+    private var selectedIndexpath: IndexPath = IndexPath(item: 0, section: 0)
 
     public init() {
         super.init(frame: .zero)
@@ -78,7 +77,7 @@ extension TabularHeaderview: UICollectionViewDataSource, UICollectionViewDelegat
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TabularViewCell", for: indexPath) as! TabularViewCell
-        cell.isSelected = (indexPath.item == selectedCategory)
+        cell.isSelected = (indexPath == selectedIndexpath)
         cell.titleLabel.text = items[indexPath.item]
         return cell
     }
@@ -86,10 +85,8 @@ extension TabularHeaderview: UICollectionViewDataSource, UICollectionViewDelegat
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath)
         cell?.isSelected = true
-        if let oldIndex = selectedIndexpath {
-            let oldCell = collectionView.cellForItem(at: oldIndex)
-            oldCell?.isSelected = false
-        }
+        let oldCell = collectionView.cellForItem(at: selectedIndexpath)
+        oldCell?.isSelected = false
         selectedIndexpath = indexPath
     }
 }
