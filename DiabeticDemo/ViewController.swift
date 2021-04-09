@@ -55,6 +55,7 @@ class ViewController: UIViewController {
         tips.append(TipsCellModel(title: "Give a family favorite a healthy makeover by making meatballs with turkey and veggies.", subtitle: "Add ground turkey, cheese, zuccini and bread\n\nPut it on top of whole wheat pasta, Yum! sdsd sdhdsh dsnsdn dsnsdnsd dsnsd\nsdhdshsdhdshsdhsdhds dsnds dsdsds dsndsndsn\nsdhdshds dssd dsdsdjsdjdsj nsdsdsd.", isliked: false, isDisliked: false, isSaved: false))
         tips.append(TipsCellModel(title: "Give a family favorite a healthy makeover by making meatballs with turkey and veggies.", subtitle: "Add ground turkey, cheese, zuccini and bread\n\nPut it on top of whole wheat pasta, Yum! sdsd sdhdsh dsnsdn dsnsdnsd dsnsd\nsdhdshsdhdshsdhsdhds dsnds dsdsds dsndsndsn\nsdhdshds dssd dsdsdjsdjdsj nsdsdsd.", isliked: false, isDisliked: false, isSaved: false))
         setupView()
+        tipsHeaderView.items = ["Tips of the day", "Insulin", "Healthy Meal", "Category4","Tips of the day","Tips of the day", "Insulin", "Healthy Meal", "Category4","Tips of the day"]
     }
 
     private func setupView() {

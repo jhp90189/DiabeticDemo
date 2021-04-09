@@ -11,6 +11,8 @@ class TabularHeaderview: UIView {
     
     private let verticalMargin: CGFloat = 10.0
     private let horizontalMargin: CGFloat = 5.0
+    private let selectedCategory = 0
+    private var listHeightConstraint: NSLayoutConstraint? = nil
 
     private lazy var tipsHeaderView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -26,7 +28,12 @@ class TabularHeaderview: UIView {
         return collectionView
     }()
     
-    let items = ["Tips of the day", "Insulin", "Healthy Meal", "Category4","Tips of the day","Tips of the day", "Insulin", "Healthy Meal", "Category4","Tips of the day"]
+    var items: [String] = [] {
+        didSet {
+            updateListHeight()
+            tipsHeaderView.reloadData()
+        }
+    }
     
     private var selectedIndexpath: IndexPath? = nil
 
@@ -49,8 +56,18 @@ class TabularHeaderview: UIView {
         ])
         tipsHeaderView.delegate = self
         tipsHeaderView.dataSource = self
+        updateListHeight()
+    }
+    
+    private func updateListHeight() {
         let numberOfRow = Int(Double(items.count) / 2.5)
-        heightAnchor.constraint(equalToConstant: CGFloat(numberOfRow * 50)).isActive = true
+        let height = CGFloat(numberOfRow * 50)
+        if let heightConstraint = listHeightConstraint {
+            heightConstraint.constant = height
+        } else {
+            listHeightConstraint = heightAnchor.constraint(equalToConstant: height)
+            listHeightConstraint?.isActive = true
+        }
     }
 }
 
@@ -61,6 +78,7 @@ extension TabularHeaderview: UICollectionViewDataSource, UICollectionViewDelegat
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TabularViewCell", for: indexPath) as! TabularViewCell
+        cell.isSelected = (indexPath.item == selectedCategory)
         cell.titleLabel.text = items[indexPath.item]
         return cell
     }
