@@ -7,10 +7,25 @@
 
 import UIKit
 
+protocol TipsCellDelegate: class {
+    func didLikeClick(cell: TipsCell)
+    func didDislikeClick(cell: TipsCell)
+    func didSaveClick(cell: TipsCell)
+}
+
+struct TipsCellModel {
+    let title: String
+    let subtitle: String
+    var isliked: Bool
+    var isDisliked: Bool
+    var isSaved: Bool
+}
+
 class TipsCell: UICollectionViewCell {
     
     private let horizontalMargin: CGFloat = 20
     private let iconSize: CGFloat = 25
+    weak public var delegate: TipsCellDelegate? = nil
     
     private lazy var containerStackView: UIStackView = {
        let stackView = UIStackView()
@@ -61,6 +76,26 @@ class TipsCell: UICollectionViewCell {
         return stackView
     }()
     
+    private lazy var likeStackView: UIStackView = {
+       let stackView = UIStackView()
+        stackView.axis = .horizontal
+        stackView.spacing = 2
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.addArrangedSubview(likeImageView)
+        stackView.addArrangedSubview(likeLabel)
+        stackView.isUserInteractionEnabled = true
+        stackView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(likeButtonTapped)))
+        return stackView
+    }()
+    
+    lazy var likeLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont.boldSystemFont(ofSize: 12)
+        label.text = "Like"
+        return label
+    }()
+    
     private lazy var likeImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -68,11 +103,31 @@ class TipsCell: UICollectionViewCell {
         return imageView
     }()
     
+    private lazy var dislikeStackView: UIStackView = {
+       let stackView = UIStackView()
+        stackView.axis = .horizontal
+        stackView.spacing = 2
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.addArrangedSubview(dislikeImageView)
+        stackView.addArrangedSubview(dislikeLabel)
+        stackView.isUserInteractionEnabled = true
+        stackView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(dislikeButtonTapped)))
+        return stackView
+    }()
+    
     private lazy var dislikeImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.image = UIImage(named: "dislike")
         return imageView
+    }()
+    
+    lazy var dislikeLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont.boldSystemFont(ofSize: 12)
+        label.text = "Dislike"
+        return label
     }()
     
     private lazy var spacerView: UIView = {
@@ -87,6 +142,8 @@ class TipsCell: UICollectionViewCell {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.image = UIImage(named: "heart")
+        imageView.isUserInteractionEnabled = true
+        imageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(saveButtonTapped)))
         return imageView
     }()
     
@@ -107,8 +164,8 @@ class TipsCell: UICollectionViewCell {
         containerStackView.addArrangedSubview(separatorView)
         containerStackView.addArrangedSubview(footerStackView)
 
-        footerStackView.addArrangedSubview(likeImageView)
-        footerStackView.addArrangedSubview(dislikeImageView)
+        footerStackView.addArrangedSubview(likeStackView)
+        footerStackView.addArrangedSubview(dislikeStackView)
         footerStackView.addArrangedSubview(spacerView)
         footerStackView.addArrangedSubview(heartImageView)
         
@@ -139,9 +196,23 @@ class TipsCell: UICollectionViewCell {
         contentView.layer.cornerRadius = 15.0
     }
     
-    func updateDetails() {
-        titleLabel.text = "Give a family favorite a healthy makeover by making meatballs with turkey and veggies."
-        
-        subtitleLabel.text = "Add ground turkey, cheese, zuccini and bread\n\nPut it on top of whole wheat pasta, Yum!"
+    @objc func likeButtonTapped() {
+        delegate?.didLikeClick(cell: self)
+    }
+    
+    @objc func dislikeButtonTapped() {
+        delegate?.didDislikeClick(cell: self)
+    }
+    
+    @objc func saveButtonTapped() {
+        delegate?.didSaveClick(cell: self)
+    }
+    
+    func updateDetails(model: TipsCellModel) {
+        titleLabel.text = model.title
+        subtitleLabel.text = model.subtitle
+        likeImageView.image = model.isliked ? UIImage(named: "like_active") : UIImage(named: "like_inactive") // put active/inactive image accordingly
+        dislikeImageView.image = model.isDisliked ? UIImage(named: "dislike_active") : UIImage(named: "dislike_inactive") // put active/inactive image accordingly
+        heartImageView.image = model.isSaved ? UIImage(named: "heart_active") : UIImage(named: "heart_inactive") // put active/inactive image accordingly
     }
 }

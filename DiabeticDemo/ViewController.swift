@@ -46,9 +46,14 @@ class ViewController: UIViewController {
         return stackView
     }()
     
+    private var tips :[TipsCellModel] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        tips.append(TipsCellModel(title: "Give a family favorite a healthy makeover by making meatballs with turkey and veggies.", subtitle: "Add ground turkey, cheese, zuccini and bread\n\nPut it on top of whole wheat pasta, Yum! sdsd sdhdsh dsnsdn dsnsdnsd dsnsd\nsdhdshsdhdshsdhsdhds dsnds dsdsds dsndsndsn\nsdhdshds dssd dsdsdjsdjdsj nsdsdsd.", isliked: false, isDisliked: false, isSaved: false))
+        tips.append(TipsCellModel(title: "Give a family favorite a healthy makeover by making meatballs with turkey and veggies.", subtitle: "Add ground turkey, cheese, zuccini and bread\n\nPut it on top of whole wheat pasta, Yum! sdsd sdhdsh dsnsdn dsnsdnsd dsnsd\nsdhdshsdhdshsdhsdhds dsnds dsdsds dsndsndsn\nsdhdshds dssd dsdsdjsdjdsj nsdsdsd.", isliked: false, isDisliked: false, isSaved: false))
+        tips.append(TipsCellModel(title: "Give a family favorite a healthy makeover by making meatballs with turkey and veggies.", subtitle: "Add ground turkey, cheese, zuccini and bread\n\nPut it on top of whole wheat pasta, Yum! sdsd sdhdsh dsnsdn dsnsdnsd dsnsd\nsdhdshsdhdshsdhsdhds dsnds dsdsds dsndsndsn\nsdhdshds dssd dsdsdjsdjdsj nsdsdsd.", isliked: false, isDisliked: false, isSaved: false))
         setupView()
     }
 
@@ -57,6 +62,7 @@ class ViewController: UIViewController {
         containerStackView.addArrangedSubview(tipsHeaderView)
         containerStackView.addArrangedSubview(separatorView)
         containerStackView.addArrangedSubview(tipsListView)
+        containerStackView.setCustomSpacing(20, after: tipsHeaderView)
         NSLayoutConstraint.activate([
             containerStackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             containerStackView.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor),
@@ -72,12 +78,34 @@ class ViewController: UIViewController {
 
 extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return tips.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TipsCell", for: indexPath) as! TipsCell
-        cell.updateDetails()
+        cell.updateDetails(model: tips[indexPath.item])
+        cell.delegate = self
         return cell
     }
+}
+
+extension ViewController: TipsCellDelegate {
+    func didLikeClick(cell: TipsCell) {
+        guard let indexPath = tipsListView.indexPath(for: cell) else { return }
+        tips[indexPath.item].isliked = !tips[indexPath.item].isliked
+        tipsListView.reloadItems(at: [indexPath])
+    }
+    
+    func didDislikeClick(cell: TipsCell) {
+        guard let indexPath = tipsListView.indexPath(for: cell) else { return }
+        tips[indexPath.item].isDisliked = !tips[indexPath.item].isDisliked
+        tipsListView.reloadItems(at: [indexPath])
+    }
+    
+    func didSaveClick(cell: TipsCell) {
+        guard let indexPath = tipsListView.indexPath(for: cell) else { return }
+        tips[indexPath.item].isSaved = !tips[indexPath.item].isSaved
+        tipsListView.reloadItems(at: [indexPath])
+    }
+    
 }
