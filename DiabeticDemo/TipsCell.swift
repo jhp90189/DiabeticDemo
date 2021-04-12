@@ -212,7 +212,7 @@ class TipsCell: UICollectionViewCell {
         titleLabel.text = model.title
         subtitleLabel.text = model.subtitle
         likeImageView.image = model.isliked ? UIImage(named: "like_active") : UIImage(named: "like_inactive") // put active/inactive image accordingly
-        dislikeImageView.image = model.isDisliked ? UIImage(named: "dislike_active") : UIImage(named: "dislike_inactive") // put active/inactive image accordingly
+        dislikeImageView.image = UIImage(named: model.isDisliked ? "dislike_active" : "dislike_inactive")
         heartImageView.image = model.isSaved ? UIImage(named: "heart_active") : UIImage(named: "heart_inactive") // put active/inactive image accordingly
     }
 }

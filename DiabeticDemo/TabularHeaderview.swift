@@ -8,17 +8,19 @@
 import UIKit
 
 class TabularHeaderview: UIView {
-    
     private let verticalMargin: CGFloat = 10.0
     private let horizontalMargin: CGFloat = 5.0
-    private var listHeightConstraint: NSLayoutConstraint? = nil
+    private var listHeightConstraint: NSLayoutConstraint?
 
     private lazy var tipsHeaderView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         layout.minimumLineSpacing = verticalMargin
         layout.minimumInteritemSpacing = verticalMargin
-        layout.sectionInset = UIEdgeInsets(top: verticalMargin, left: horizontalMargin, bottom: verticalMargin, right: horizontalMargin)
+        layout.sectionInset = UIEdgeInsets(top: verticalMargin,
+                                           left: horizontalMargin,
+                                           bottom: verticalMargin,
+                                           right: horizontalMargin)
         layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
@@ -75,8 +77,12 @@ extension TabularHeaderview: UICollectionViewDataSource, UICollectionViewDelegat
         return items.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TabularViewCell", for: indexPath) as! TabularViewCell
+    func collectionView(_ collectionView: UICollectionView,
+                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TabularViewCell",
+                                                            for: indexPath) as? TabularViewCell else {
+            return TabularViewCell(frame: .zero)
+        }
         cell.isSelected = (indexPath == selectedIndexpath)
         cell.titleLabel.text = items[indexPath.item]
         return cell
