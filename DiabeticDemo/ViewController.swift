@@ -9,11 +9,26 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    private lazy var tipsHeaderView: TabularHeaderview = {
-        let view = TabularHeaderview()
+    private lazy var segmentStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.axis = .vertical
+        stackView.isLayoutMarginsRelativeArrangement = true
+        stackView.layoutMargins = UIEdgeInsets(top: 0, left: 23, bottom: 0, right: 23)
+        stackView.addArrangedSubview(tipsHeaderView)
+        return stackView
+    }()
+    
+    private lazy var tipsHeaderView: KZSegmentedControl = {
+        let view = KZSegmentedControl()
+        view.itemTitles = ["Today's tip", "All Tips", "Saved"]
+        view.allowChangeThumbWidth = false
+        view.cornerRadius = 25
+        return view
+        /*let view = TabularHeaderview()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.setContentHuggingPriority(.required, for: .vertical)
-        return view
+        return view*/
     }()
     
     private lazy var separatorView: UIView = {
@@ -60,7 +75,7 @@ class ViewController: UIViewController {
 
     private func setupView() {
         view.addSubview(containerStackView)
-        containerStackView.addArrangedSubview(tipsHeaderView)
+        containerStackView.addArrangedSubview(segmentStackView)
         containerStackView.addArrangedSubview(separatorView)
         containerStackView.addArrangedSubview(tipsListView)
         containerStackView.setCustomSpacing(20, after: tipsHeaderView)
@@ -69,11 +84,16 @@ class ViewController: UIViewController {
             containerStackView.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor),
             containerStackView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor),
             containerStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
-            
+            segmentStackView.heightAnchor.constraint(equalToConstant: 50),
+            //tipsHeaderView.widthAnchor.constraint(equalToConstant: 250),
+
             separatorView.heightAnchor.constraint(equalToConstant: 1)
         ])
         tipsListView.dataSource = self
         tipsListView.delegate = self
+        tipsHeaderView.didSelectItemWith = { (index, title) in
+            print(title)
+        }
     }
 }
 
