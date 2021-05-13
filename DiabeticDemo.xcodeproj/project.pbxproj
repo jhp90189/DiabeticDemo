@@ -19,6 +19,7 @@
 		18A234482616960700BC69E0 /* TabularViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A234472616960700BC69E0 /* TabularViewCell.swift */; };
 		18A2344D26173BD900BC69E0 /* TabularHeaderview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A2344C26173BD900BC69E0 /* TabularHeaderview.swift */; };
 		18A23452261780F000BC69E0 /* TipsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A23451261780F000BC69E0 /* TipsCell.swift */; };
+		18C21257264D56BB000B5368 /* KZSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C21256264D56BB000B5368 /* KZSegmentedControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		18A234472616960700BC69E0 /* TabularViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabularViewCell.swift; sourceTree = "<group>"; };
 		18A2344C26173BD900BC69E0 /* TabularHeaderview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabularHeaderview.swift; sourceTree = "<group>"; };
 		18A23451261780F000BC69E0 /* TipsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsCell.swift; sourceTree = "<group>"; };
+		18C21256264D56BB000B5368 /* KZSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KZSegmentedControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				18A234152616926B00BC69E0 /* ViewController.swift */,
 				18A2344C26173BD900BC69E0 /* TabularHeaderview.swift */,
 				18A234472616960700BC69E0 /* TabularViewCell.swift */,
+				18C21256264D56BB000B5368 /* KZSegmentedControl.swift */,
 				18A23451261780F000BC69E0 /* TipsCell.swift */,
 				18A234172616926B00BC69E0 /* Main.storyboard */,
 				18A2341D2616926E00BC69E0 /* Assets.xcassets */,
@@ -270,6 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18C21257264D56BB000B5368 /* KZSegmentedControl.swift in Sources */,
 				18A234162616926B00BC69E0 /* ViewController.swift in Sources */,
 				18A234122616926B00BC69E0 /* AppDelegate.swift in Sources */,
 				18A234142616926B00BC69E0 /* SceneDelegate.swift in Sources */,
